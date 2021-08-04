@@ -5,11 +5,14 @@
     width: 100%;
     overflow: hidden;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     .dashboard-container{
         color: cyan;
         overflow: hidden;
-        width: 99vw;
+        width: inherit;
         height: 100vh;
         position: relative;
     

@@ -1,0 +1,46 @@
+.contact{
+    height: 100vh;
+    width: 100%;
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .contact-container {
+        // background-color: cyan;
+        width: 100%;
+        height: inherit;
+        display: flex;
+        
+        .contact-left{
+            background-color: rgb(231, 231, 231);
+            flex: .4 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: black;
+            
+            .title{
+                color: black;
+                font-size: 6rem;
+                font-weight: 900;
+                font-family: $fontKenoky;
+                display: flex;
+                flex-direction: column;
+                letter-spacing: .2em;
+                margin-bottom: 1rem;
+                &>span:nth-child(2){
+                    text-indent: 2rem;
+                }
+            }
+            .owner-text{
+                line-height: 1.4em;
+            }
+        }
+        
+        .contact-right{
+            flex: 1 0 auto;
+
+        }
+    }
+}

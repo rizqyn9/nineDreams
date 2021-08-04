@@ -10,14 +10,20 @@
 body {
     overscroll-behavior: none;
     background-color: black;
+    overflow-x: hidden;
     height: max-content;
+    border: 1px solid white;
+    border-right: 1px solid white;
 }
+
+@import './components/Utils/scrollbar';
 
 @import './components/Header/header';
 @import './components/title/title';
 @import './components/Dashboard/dashboard';
 @import './components/CreativeCommunication/creativeComm';
 @import './components/Products/products';
+@import './components/Contact/contact';
 
 
 .text-{
@@ -41,7 +47,6 @@ body {
     }
     &4xl{
         font-size: 3rem;
-
     }
 }
 
@@ -56,4 +61,12 @@ body {
     padding: {
         top: $navHeight;
     };
+}
+
+.border-style{
+    border: 1px solid white;
+}
+
+.fix-margin{
+    width: 101vw;
 }
