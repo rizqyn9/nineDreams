@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'kenoky';
+    src: url('../public/fonts/kenoky/KenokyLight.ttf');
+}
+@font-face {
+    font-family: 'coffee';
+    src: url('../public/fonts/kenoky/CoffekanRegular.ttf');
+}
+
+$fontCoffee : 'coffee';
+$fontKenoky : 'kenoky';

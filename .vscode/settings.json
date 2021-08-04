@@ -1,0 +1,15 @@
+{
+    "editor.autoClosingBrackets": "always",
+    "workbench.editor.enablePreview": false,
+    "javascript.autoClosingTags": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.autoClosingQuotes": "always",
+    "javascript.format.enable": true,
+    "[javascript]": {
+        "editor.autoClosingBrackets": "always"
+    },
+    "[jsx]": {
+        "editor.autoClosingBrackets": "always"
+    }
+
+}

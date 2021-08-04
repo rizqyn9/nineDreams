@@ -8,9 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "@inlet/react-pixi": "^6.6.3",
+    "@react-hook/window-size": "^3.0.7",
+    "@react-three/drei": "^7.3.1",
+    "framer-motion": "^4.1.17",
+    "jotai": "^1.2.2",
     "next": "^11.0.0",
     "react": "17.0.2",
+    "react-device-detect": "^1.17.0",
     "react-dom": "17.0.2",
     "sass": "^1.37.0"
+  },
+  "devDependencies": {
+    "prettier": "2.3.2"
   }
 }

@@ -1,8 +1,11 @@
-import style from './container.module.scss'
 
-const Container = ({children}) => {
+import Header from "../Header/Header"
+
+const Container = ({children, data}) => {
+    
     return(
-        <div className={style.container}>
+        <div className="container">
+            <Header/>
             {children}
         </div>
     )

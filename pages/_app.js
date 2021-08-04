@@ -1,10 +1,10 @@
-import '../styles/globals.css'
 import '../styles/globals.scss'
 import Container from '../components/container/container'
+import { useState, useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
   return (
-      <Container>
+      <Container >
           <Component {...pageProps} />
       </Container>
   )

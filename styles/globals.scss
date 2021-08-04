@@ -1,1 +1,59 @@
-$color1 : red;
+@import './globalVariables';
+@import './fonts';
+@import './components/container/container';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overscroll-behavior: none;
+    background-color: black;
+    height: max-content;
+}
+
+@import './components/Header/header';
+@import './components/title/title';
+@import './components/Dashboard/dashboard';
+@import './components/CreativeCommunication/creativeComm';
+@import './components/Products/products';
+
+
+.text-{
+    &xs{
+        font-size: .5rem;
+    }
+    &sm{
+        font-size: .75rem;
+    }
+    &md{
+        font-size: 1.2rem;
+    }
+    &lg{
+        font-size: 1.6rem;
+    }
+    &xl{
+        font-size: 2rem;
+    }
+    &2xl{
+        font-size: 2.5rem;
+    }
+    &4xl{
+        font-size: 3rem;
+
+    }
+}
+
+.l-container{
+    padding: {
+        left: 5rem;
+        right: 5rem;
+    };
+}
+
+.cut-nav{
+    padding: {
+        top: $navHeight;
+    };
+}
