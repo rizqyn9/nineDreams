@@ -6,6 +6,21 @@
     font-family: 'coffee';
     src: url('../public/fonts/kenoky/CoffekanRegular.ttf');
 }
+@font-face {
+    font-family: 'migha';
+    src: url('/public/fonts/migha/Migha-Regular.otf');
+}
+@font-face {
+    font-family: 'neutral';
+    src: url('/public/fonts/NeutralFace/NeutralFace.otfotf');
+}
+@font-face {
+    font-family: 'bookman';
+    src: url('/public/fonts/bookman/bookmanoldstyle.ttf');
+}
 
 $fontCoffee : 'coffee';
 $fontKenoky : 'kenoky';
+$fontMigha : 'migha';
+$fontNeutral : 'neutral';
+$fontBookman : 'bookman';

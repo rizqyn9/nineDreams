@@ -40,7 +40,176 @@
         
         .contact-right{
             flex: 1 0 auto;
+            color: white;
+            // background-color: red;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            .get-container{
+                flex: .6 0 auto;
+                // background-color: red;
+                font-family: $fontKenoky;
+                font-size: 9rem;
+                font-style: italic;
+            }
+            
+            .form-container{
+                flex: 1 0 auto;
+                // background-color: purple;
+                justify-self: center;
+                align-self: center;
+
+                .input-container{
+                    width: 50vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+
+                    .contact-input{
+                        position: relative;
+                        margin: 1.5em;
+                        width: calc(50% - 2em);
+                        height: 5rem;
+                        width: inherit;
+
+                        .contact-input-field{
+                            position: absolute;
+                            margin: 1.2em 0;
+                            padding: 0.4em;
+                            width: 100%;
+                            height: calc(100% - 2em);
+                            border: none;
+                            border-radius: 0;
+                            background: transparent;
+                            color: rgba(82, 235, 255, 0.815);
+                            font-size: 2em;
+                            font-weight: bold;
+                            -webkit-appearance: none;/* for box shadows to show on iOS */
+
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+
+                        .contact-input-label{
+                            position: absolute;
+                            padding: 0 1em;
+                            margin: 1.2em 0;
+                            width: 100%;
+                            height: calc(100% - 1em);
+                            color: white;
+                            font-weight: bold;
+                            font-size: 1em;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            -webkit-touch-callout: none;
+                            -webkit-user-select: none;
+                            -khtml-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+
+                            .contact-label-content{
+                                position: relative;
+                                display: block;
+                                padding: 1.5em 0;
+                                width: 100%;
+                                -webkit-transition: -webkit-transform 0.3s;
+                                transition: transform 0.3s;
+
+                                &::before,&::after{
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 2px;
+                                    // background: red;
+                                    -webkit-transition: -webkit-transform 0.3s;
+                                    transition: transform 0.3s;
+                                }
+                            }
+                            
+                            &::after, &::before{
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                width: 100%;
+                                height: 2px;
+                                background: #6a7989;
+                                -webkit-transition: -webkit-transform 0.3s;
+                                transition: transform 0.3s;
+                            }
+
+                            &::after{
+                                bottom: 0;
+                            }
+
+                            &::before{
+                                top: 0;
+                            }
+
+                        }
+                    }
+                }
+            }
 
         }
     }
 }
+
+
+.contact-input-field:focus + .contact-input-label .contact-label-content,
+.input-filled .contact-label-content{
+    -webkit-transform: translate3d(0, -90%, 0);
+    transform: translate3d(0, -90%, 0);
+}
+
+.contact-input-field:focus + .contact-input-label::before,
+.input-filled .contact-input-label::before {
+  -webkit-transform: translate3d(0, -0.5em, 0);
+  transform: translate3d(0, -0.5em, 0);
+}
+
+.contact-input-field:focus + .contact-input-label::after,
+.input-filled .contact-input-label::after {
+  -webkit-transform: translate3d(0, -0.5em, 0);
+  transform: translate3d(0, 0.5em, 0);
+
+}
+
+textarea {
+    border: none;
+    resize: none;
+}
+
+.message{
+    font-size: 1em;
+    height: 10rem !important;
+}
+
+#send-button {
+    margin-top: 3rem;
+    align-self: center;
+    width: 200px;
+    height: 60px;
+    background-color: #6a7989;
+    color: #000;
+    border: 0;
+    font-weight: bold;
+    font-size: 70.25%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+  }
+  
+  #send-button:hover,
+  #send-button:focus {
+    outline: 0;
+    background-color: #ffcc00;
+    color: #000;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+  }

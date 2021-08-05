@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import {isChrome, isBrowser, isMobile, isSafari} from 'react-device-detect'
+import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 import Dashboard from '../components/Dashboard/Dashboard';
 import Products from '../components/Products/Products';
@@ -15,14 +16,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="home" style={{color:"red"}}>
-        <section className="dashboard fix-margin">
+        <section className="dashboard">
           <Dashboard/>
         </section>
         <section className="products">
           <Products/>
         </section>
-        <section className="contact fix-margin">
+        <section className="contact">
           <Contact/>
+        </section>
+        <section className="about l-container">
+          <About/>
         </section>
       </main>
     </>

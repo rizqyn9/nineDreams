@@ -1,7 +1,9 @@
 const Title = () => {
     return(
         <div className="title">
+            <span>
               ninedreams
+            </span>
         </div>
     )
 }

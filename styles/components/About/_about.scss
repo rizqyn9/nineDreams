@@ -1,0 +1,49 @@
+.about{
+    min-height: 100vh;
+    // background-color: rgb(2, 160, 160);
+    color: white;
+
+    &-container{
+        // background-color: cyan;
+        display: flex;
+        height: 100vh !important;
+        flex-direction: column;
+        height: inherit;
+        align-content: stretch;
+    }
+
+    &-title-container{
+        flex: 1 1 auto;
+        margin-top: 3rem;
+
+        .about-title{
+            font-style: italic;
+            color: transparent;
+            font-family: $fontMigha;
+            font-size: 10rem;
+            -webkit-text-stroke: 3px white;
+            
+            span:nth-child(1){
+                -webkit-text-stroke: none;
+                color: white;
+                margin-top: -5rem;
+                display: block;
+                font-style: normal;
+                text-indent: 5rem;
+            }
+        }
+
+    }
+    .about-content-container{
+        flex: 1 1 auto;
+        font-family: $fontNeutral;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 3rem;
+    }
+    @for $i from 1 to 5 {
+        .about-content:nth-child(#{$i}){
+            text-indent: (3rem * $i);
+        }
+    }
+}
