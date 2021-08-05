@@ -68,7 +68,8 @@
     align-items: center;
     justify-content: center;
     width: 20rem;
-    aspect-ratio: 1/1.4;
+    min-height: 45vh;
+    aspect-ratio: 1/1.4 !important;
     background-color: none;
     border: 1px solid cyan;
     transition: all 2s;
