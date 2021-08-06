@@ -45,3 +45,18 @@ export const ProductItems = [
         Img : ""
     }
 ]
+
+export const creatiiveList = [
+    {
+        Title : "Canda dong",
+        Desc : "models/model1.jpg",
+        Img : "/models/model1.jpg",
+        Link : ""
+    },
+    {
+        Title : "Canda dong",
+        Desc : "models/model1.jpg",
+        Img : "/models/model1.jpg",
+        Link : ""
+    },
+]
