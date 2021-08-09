@@ -7,10 +7,9 @@ const CollageItems = (props) => {
         children
     } = props
 
-
     return(
         <div
-            key={Key}
+            key={`${Key}`}
             className="collage-item-container"
             // style={{backgroundImage:`url(${Img})`}}
         >

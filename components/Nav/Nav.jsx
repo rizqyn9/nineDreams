@@ -1,9 +1,39 @@
 import NavLink from "./NavLink"
+import React from 'react'
 
 const Nav = () => {
+    const scroolToTarget = (target) => {
+        document.getElementById(target).scrollIntoView()
+    }
     return(
         <div className="container-nav-link ">
-            <NavLink activeClassName="active-link" href="/">
+            <div className="nav-link border-style"
+                onClick={() => scroolToTarget('home')}
+            >
+                Home
+            </div>
+            <div className="nav-link border-style"
+                onClick={() => scroolToTarget('products')}
+            >
+                Products
+            </div>
+            <div className="nav-link border-style"
+                onClick={() => scroolToTarget('creative')}
+                >
+                Creative Communication
+            </div>
+            <div className="nav-link border-style"
+                onClick={() => scroolToTarget('about')}
+                >
+                About
+            </div>
+            <div className="nav-link border-style"
+                onClick={() => scroolToTarget('contact')}
+                >
+                Contact
+            </div>
+            
+            {/* <NavLink activeClassName="active-link" href="/">
                 <div className="nav-link border-style">
                     Home
                 </div>
@@ -27,7 +57,7 @@ const Nav = () => {
                 <div className="nav-link border-style">
                     Contact
                 </div>
-            </NavLink>
+            </NavLink> */}
         </div>
     )
 }

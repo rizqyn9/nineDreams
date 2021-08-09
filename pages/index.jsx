@@ -18,19 +18,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="home" style={{color:"red"}}>
-        <section className="dashboard">
+        <section className="dashboard" id="home">
           <Dashboard/>
         </section>
-        <section className="products">
+        <section className="products" id="products">
           <Products/>
         </section>
-        <section className="contact">
+        <section className="contact" id="contact">
           <Contact/>
         </section>
-        <section className="about l-container">
+        <section className="about l-container" id="about">
           <About/>
         </section>
-        <section className="creative">
+        <section className="creative" id="creative">
           <Creative/>
         </section>
       </main>
