@@ -11,7 +11,6 @@ const Header = () => {
     return(
         <motion.div
             className={`header l-container ${scrollY > 100 ? "overlay" : ""}`}
-
         >
             <Title/>
             {scrollY}
