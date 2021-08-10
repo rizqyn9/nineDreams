@@ -1,4 +1,4 @@
-
+import { useEffect } from "react"
 const CollageItems = (props) => {
     const {
         Title,
@@ -9,11 +9,11 @@ const CollageItems = (props) => {
 
     return(
         <div
-            key={`${Key}`}
+            key={Key}
             className="collage-item-container"
             // style={{backgroundImage:`url(${Img})`}}
         >
-            <img src={Img} alt={Title} srcset="" className=""/>
+            <img src={Img} alt={Title} className="" key={Key}/>
             {Title}
         </div>
     )

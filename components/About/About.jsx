@@ -1,9 +1,10 @@
 const About = () => {
 
     return (
-        <div className="cut-nav about-container ">
+        <div className="cut-nav about-container "
+        >
             <div className="about-title-container">
-                <div className="about-title">
+                <div className="about-title" >
                     about 
                     <span>
                          ninedreams

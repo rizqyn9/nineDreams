@@ -1,8 +1,19 @@
 import {ProductItems} from '../../dataConfig'
 import ProductItem from './ProductItem';
 import use from '@react-hook/window-size'
+import {useSwipeable} from 'react-swipeable';
+import SliderProducts from "./SliderProducts";
+
 
 export default function Products () {
+    const handler = useSwipeable({
+        onSwiped:(e)=> {
+            console.log(e)
+        },
+        onTap: (e) => {
+            console.log(e.event)
+        }
+    })
     return (
         <div className="product-container cut-nav l-container">
             <div className="title-container">
@@ -21,18 +32,19 @@ export default function Products () {
                 <h3 className="text-md">hehehe</h3>
             </div>
             <div className="product-list-container">
-                <div className="product-list">
-                    {
-                        ProductItems.map((val,i) => {
-                            return(
-                                <ProductItem 
-                                    key={`product-${i}`} 
-                                    Title={val.Title}
-                                    Desc={val.Desc}
-                                />
-                            )
-                        })
-                    }
+                <div className="product-list" {...handler}>
+                    <SliderProducts/>
+                    {/*{*/}
+                    {/*    ProductItems.map((val,i) => {*/}
+                    {/*        return(*/}
+                    {/*            <ProductItem*/}
+                    {/*                key={`product-${i}`}*/}
+                    {/*                Title={val.Title}*/}
+                    {/*                Desc={val.Desc}*/}
+                    {/*            />*/}
+                    {/*        )*/}
+                    {/*    })*/}
+                    {/*}*/}
                 </div>
             </div>
         </div>

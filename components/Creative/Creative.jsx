@@ -15,7 +15,8 @@ const Creative = () => {
                             <CollageItems 
                                 Title={val.Title}
                                 Img={val.Img}
-                                Key={`${val.Title-i}`}
+                                Key={i}
+                                key={i}
                             />
                         )
                     })

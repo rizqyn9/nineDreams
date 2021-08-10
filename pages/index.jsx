@@ -8,7 +8,6 @@ import Dashboard from '../components/Dashboard/Dashboard';
 import Products from '../components/Products/Products';
 
 
-
 export default function Home() {
 
   return (
@@ -24,15 +23,15 @@ export default function Home() {
         <section className="products" id="products">
           <Products/>
         </section>
-        <section className="contact" id="contact">
-          <Contact/>
-        </section>
-        <section className="about l-container" id="about">
-          <About/>
-        </section>
-        <section className="creative" id="creative">
-          <Creative/>
-        </section>
+        {/*<section className="contact" id="contact">*/}
+        {/*  <Contact/>*/}
+        {/*</section>*/}
+        {/*<section className="about l-container" id="about">*/}
+        {/*  <About/>*/}
+        {/*</section>*/}
+        {/*<section className="creative" id="creative">*/}
+        {/*  <Creative/>*/}
+        {/*</section>*/}
       </main>
     </>
   );
