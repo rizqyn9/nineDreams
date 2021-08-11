@@ -1,13 +1,21 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+import {useInView} from 'react-intersection-observer'
+import { motion, useAnimation } from 'framer-motion'
+import {GlobalConfig, ContactConfig} from '../InView/config'
 
 const Contact = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
 
-    const onFocusHandle = (e) => {
-
-    }
+    const {inView, ref} = useInView({
+        // rootMargin:'1000px'
+    });
+    const contactAnim = useAnimation()
+    useEffect(()=>{
+        console.log("haha" + inView);
+        inView ? contactAnim.start("visible") : contactAnim.start("hidden")
+    },[inView])
 
     const onBlurHandle = (e) => {
         let parent = e.target.parentElement
@@ -19,15 +27,34 @@ const Contact = () => {
     }
     return(
         <div className="contact-container cut-nav">
-            <div className="contact-left l-container">
-                <div className="title">
+            <motion.div className="contact-left l-container"
+                animate={contactAnim}
+                initial='hidden'
+                variants={{
+                    hidden :{
+                        // scaleX:.1,
+                        x:'-20vw',
+                        opacity:0
+                    },
+                    visible:{
+                        x:'0',
+                        opacity:1
+                        // scaleX:1
+
+                    }
+                }}
+                transition={{
+                    duration:1
+                }}
+            >
+                <div className="title" ref={ref}>
                     <span>Hi</span>
                     <span>You!!</span>
                 </div>
                 <div className="owner-text text-lg">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur exercitationem excepturi quo.
                 </div>
-            </div>
+            </motion.div>
             <div className="contact-right l-container border-style">
                 <div className="get-container">
                     Get <span>in</span> <span>Touch</span>
