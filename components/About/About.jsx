@@ -5,7 +5,7 @@ import {useAnimation, motion, transform} from 'framer-motion'
 const About = () => {
     const aboutAnim = useAnimation()
     const {ref: ref1, inView} = useInView({
-        // rootMargin:'-400px'
+        threshold:.5
     })
 
     useEffect(()=>{
