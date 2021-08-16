@@ -1,3 +1,4 @@
+@import './hamburger';
 .header{
     color: white;
     // background: rgba(0, 0, 0,0.5);
@@ -10,7 +11,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0 3rem 0 3rem;
+    // padding: 0 3rem 0 3rem;
     z-index: 100;
     // border: 1px solid white;
 
@@ -48,6 +49,23 @@
         font-size: 2rem;
         // letter-spacing: .3em;
 
+    }
+
+    .on-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // background-color: red;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        & > * {
+            line-height: 1em;
+        }
     }
 }
 

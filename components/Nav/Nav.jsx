@@ -1,12 +1,19 @@
 import NavLink from "./NavLink"
 import React from 'react'
+import {useAtom} from 'jotai'
+import {sizeScreen, deviceTarget} from '../Provider/Provider'
 
-const Nav = () => {
+const Nav = (props) => {
+    const {mode} = props
+    const [useSizeScreen, setSizeScreen] = useAtom(sizeScreen)
+    const [useDeviceTarget, setDeviceTarget] = useAtom(deviceTarget)
+
     const scroolToTarget = (target) => {
         document.getElementById(target).scrollIntoView()
     }
+
     return(
-        <div className="container-nav-link ">
+        <div className={`container-nav-link ${mode}`}>
             <div className="nav-link border-style"
                 onClick={() => scroolToTarget('home')}
             >

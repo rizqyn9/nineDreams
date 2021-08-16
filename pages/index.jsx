@@ -15,6 +15,7 @@ export default function Home() {
       <Head>
         <title>ninedreams | Home</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="http://localhost:8097"></script>
       </Head>
       <main className="home" style={{color:"red"}}>
         <section className="dashboard" id="home">

@@ -1,0 +1,34 @@
+.hamburger-container{
+  background-color: red;
+  min-width: 1rem;
+  min-height: 1rem;
+  // position: relative;
+
+  button {
+    outline: none;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    z-index: 2;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: wheat;
+    z-index: 1;
+  }
+}
