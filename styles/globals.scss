@@ -57,6 +57,15 @@ body {
         left: 5rem;
         right: 5rem;
     };
+    // background-color: darkcyan;
+    @media (max-width :1025px) {
+        height: max-content;
+        padding: {
+            top: 1rem;
+            left: 1rem;
+            right: 1rem;
+        };
+    }
 }
 
 .cut-nav{
@@ -71,4 +80,32 @@ body {
 
 .fix-margin{
     width: 101vw;
+}
+
+
+// Media Queries
+@media (max-width : 1025px) {
+    .text-{
+        &xs{
+            font-size: .3rem;
+        }
+        &sm{
+            font-size: .5rem;
+        }
+        &md{
+            font-size: 1rem;
+        }
+        &lg{
+            font-size: 1.2rem;
+        }
+        &xl{
+            font-size: 1.5rem;
+        }
+        &2xl{
+            font-size: 1.8rem;
+        }
+        &4xl{
+            font-size: 2rem;
+        }
+    }
 }

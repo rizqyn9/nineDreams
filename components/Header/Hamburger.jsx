@@ -82,6 +82,7 @@ const Hamburger = () => {
 
     }, [useScrollTarget])
     return (
+      <div className="hamburger-style">
         <motion.div
             initial={false}
             animate={isOpen ? "open" : "closed"}
@@ -118,6 +119,7 @@ const Hamburger = () => {
               }}
             />
         </motion.div>
+      </div>
     )
 }
 

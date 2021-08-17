@@ -20,17 +20,22 @@ const Header = () => {
     },[useDeviceTarget])
 
     return(
-        <motion.div
-            className={`header l-container ${scrollY > 50 ? "overlay" : ""}`}
-        >
-            <Title/>
-            {/* {scrollY} */}
-            {/* {useSizeScreen} */}
-            {/* {`${useDeviceTarget}`} */}
-            {( useSizeScreen <= 1200 ) ? <Hamburger /> : <Nav />}
+        <div className={`header l-container ${useSizeScreen <= 1200 ? "header-humberger" : ""} `}>
+            <motion.div
+                className={`nav-inner 
+                    ${scrollY > 50 ? "overlay" : ""}
+                    ${useSizeScreen <= 1200 ? "on-hamburger" : ""}`
+                }
+            >
+                <Title isHamburger={`${useSizeScreen <= 1200}`}/>
+                {/* {scrollY} */}
+                {/* {useSizeScreen} */}
+                {/* {`${useDeviceTarget}`} */}
+                {/* {( useSizeScreen <= 1200 ) ? <Hamburger /> : <Nav />} */}
 
-            
-        </motion.div>
+                
+            </motion.div>
+        </div>
     )
 }
 

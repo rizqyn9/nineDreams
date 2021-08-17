@@ -11,7 +11,7 @@
         width: 100%;
         height: inherit;
         display: flex;
-        
+
         .contact-left{
             background-color: rgb(231, 231, 231);
             flex: .4 0 0;
@@ -155,6 +155,30 @@
                 }
             }
 
+        }
+    }
+
+    @media (max-width : 500px) {
+        
+        .contact-container {
+            min-height: 100vh;
+            width: 100vw;
+            display: block;
+            .contact-left{
+
+                .title{
+                    font-size: 3rem !important;
+                }
+            }
+            .contact-right{
+                .get-container{
+                    font-size: 3.5rem !important;
+                }
+
+                .input-container{
+                    width: 80vw !important;
+                }
+            }
         }
     }
 }

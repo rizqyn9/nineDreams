@@ -1,6 +1,11 @@
-const Title = () => {
+const Title = (props) => {
+    const {isHamburger} = props
     return(
-        <div className="title">
+        <div className="title"
+            style={{
+                order: `${isHamburger ? 1 : 'none'}`
+            }}
+        >
             <span>
               ninedreams
             </span>

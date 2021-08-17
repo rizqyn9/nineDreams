@@ -47,5 +47,55 @@
             text-indent: (3rem * $i);
         }
     }
+    
+    @media (max-width : 1200px) {
+        
+    }
 
+    @media (max-width : 900px) {
+
+        .about-title-container{
+            margin-top: 1rem;
+            width: 100vw;
+            position: relative;
+            .about-title{
+                position: absolute;
+                top: 0;
+                left: 68%;
+                transform: translateX(-50%);
+                font-size: 7rem !important;
+                position: relative;
+                :nth-child(1){
+                    position: absolute;
+                    bottom: -1rem;
+                    font-size: 4rem;
+                }
+            }
+        }
+        .about-content-container{
+            font-size: 2rem;
+        }
+    }
+    @media (max-width : 400px) {
+        // background-color: red;
+        display: block;
+
+        .about-title-container{
+            .about-title{
+                position: absolute;
+                top: 0;
+                left: 45%;
+                transform: translateX(-50%);
+                font-size: 4.5rem !important;
+                :nth-child(1){
+                    font-size: 3rem !important;
+                    // left: -1rem;
+                }
+            }
+        }
+        .about-content-container{
+            font-size: 1.5rem;
+            width: 80vw;
+        }
+    }
 }

@@ -2,9 +2,6 @@
 .header{
     color: white;
     // background: rgba(0, 0, 0,0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 0;
     height: $navHeight;
     position: fixed;
@@ -36,10 +33,6 @@
             }
             
         }
-
-        .active-link{
-            // background-color: pink;
-        }
     }
 
     .title{
@@ -52,6 +45,7 @@
     }
 
     .on-overlay {
+        color: black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,7 +60,31 @@
         & > * {
             line-height: 1em;
         }
+
+        .nav-link{
+            &:hover{
+                background-color: rgba($color: #000000, $alpha: 0) !important;
+            }
+        }
     }
+
+    &.header-humberger{
+        padding: 10px 1rem 10px 1rem;
+        .nav-inner{
+            background-color: orange;
+            border: 2px solid wheat;
+            border-radius: 1rem;
+        }
+    }
+}
+
+.nav-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .overlay{
