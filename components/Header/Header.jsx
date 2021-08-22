@@ -31,7 +31,7 @@ const Header = () => {
                 {/* {scrollY} */}
                 {/* {useSizeScreen} */}
                 {/* {`${useDeviceTarget}`} */}
-                {/* {( useSizeScreen <= 1200 ) ? <Hamburger /> : <Nav />} */}
+                {( useSizeScreen <= 1200 ) ? <Hamburger /> : <Nav />}
 
                 
             </motion.div>

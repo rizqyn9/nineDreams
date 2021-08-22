@@ -3,8 +3,6 @@ import { motion, useCycle } from "framer-motion";
 import NavOverlay from '../Nav/NavOverlay'
 import {useAtom} from 'jotai';
 import {scroolTarget} from '../Provider/Provider';
-import NavSide from "./Nav-Side";
-
 
 
 const sidebar = {
@@ -101,30 +99,9 @@ const Hamburger = () => {
             // }}
 
         >
-
+            <motion.div className="background" variants={sidebar} />
             <MenuToggle toggle={() => toggleOpen()} />
-            <NavSide
-              init={hamburgerHandler}
-              initial={false}
-              // animate={isOpen ? "open" : "closed"}
-              variants={{
-                open:{
-                  x:0,
-                  opacity:1
-                },
-                closed:{
-                  x:"100vw",
-                  opacity:0
-                }
-              }}
-              transition={{
-                staggerChildren:.05
-              }}
-            />
-
-
-            
-            {/* <NavOverlay 
+            <NavOverlay 
               mode="on-overlay" 
               init={hamburgerHandler} 
               initial={false}
@@ -140,7 +117,7 @@ const Hamburger = () => {
               transition={{
                 staggerChildren:.05
               }}
-            /> */}
+            />
         </motion.div>
       </div>
     )

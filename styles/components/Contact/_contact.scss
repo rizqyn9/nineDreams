@@ -1,7 +1,7 @@
 .contact{
-    height: 100vh;
-    width: 100%;
     // background-color: red;
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@
         .contact-right{
             flex: 1 0 auto;
             color: white;
-            // background-color: red;
+            // background-color: green;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -163,6 +163,7 @@
         .contact-container {
             min-height: 100vh;
             width: 100vw;
+            display: flex;
             display: block;
             .contact-left{
 
@@ -171,12 +172,24 @@
                 }
             }
             .contact-right{
+                width: 100vw;
+                // background-color: red;
+                // display: flex;
+                align-content: center;
+
                 .get-container{
                     font-size: 3.5rem !important;
                 }
 
                 .input-container{
                     width: 80vw !important;
+                }
+
+                .form-container{
+                    // background-color: white;
+                    width: max-content;
+                    align-content: flex-start;
+                    margin-left: -1rem;
                 }
             }
         }

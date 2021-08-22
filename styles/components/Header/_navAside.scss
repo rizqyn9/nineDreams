@@ -1,0 +1,20 @@
+.nav-side-container{
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+    background-color: red;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    .link-container{
+        // background-color: darkblue;
+
+        .nav-link{
+            // text-align: center;
+            font-size: 2rem;
+            line-height: 2em;
+            color: black;
+        }
+    }
+} 
