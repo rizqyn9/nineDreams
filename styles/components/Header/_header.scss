@@ -40,6 +40,10 @@
         color: white;
         font-weight: 800;
         font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 8px;
         // letter-spacing: .3em;
 
     }
@@ -69,11 +73,20 @@
     }
 
     &.header-humberger{
-        padding: 10px 1rem 10px 1rem;
+        padding: 10px 10px 10px 10px;
         .nav-inner{
-            background-color: orange;
+            background-color: rgb(173, 173, 173);
             border: 2px solid wheat;
-            border-radius: 1rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: {
+                top: 0;
+                left: 1rem;
+                right: 1rem;
+                bottom: 0rem;
+            };
         }
     }
 }

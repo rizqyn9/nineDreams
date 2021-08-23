@@ -1,10 +1,11 @@
 .nav-side-container{
     width: 100vw;
-    position: absolute;
+    position: fixed;
     height: 100vh;
-    background-color: red;
-    top: 0;
-    left: 0;
+    background-color: rgb(197, 162, 64);
+    // top: 0;
+    // left: -100vw;
+    z-index: 5;
     display: grid;
     place-content: center;
     .link-container{

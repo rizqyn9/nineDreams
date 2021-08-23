@@ -1,6 +1,6 @@
-import {useState} from 'react'
-import {scroolTarget} from '../Provider/Provider'
-import {motion} from 'framer-motion'
+import {useState, useEffect} from 'react'
+import {scroolTarget, asideNavState} from '../Provider/Provider'
+import {motion, useAnimation} from 'framer-motion'
 import {useAtom} from 'jotai'
 
 
@@ -12,7 +12,6 @@ const LinkNav = (props) => {
         <motion.div className="nav-link border-style"
             onClick={() => { 
                 setTarget(link) 
-                props.parent()
             }}
             // variants={{
             //     open: {
@@ -29,31 +28,44 @@ const LinkNav = (props) => {
 }
 
 const NavSide = (props) => {
-
-    const parent = () => {
-        props.init()
-    }
+    const [useAsideState, setAsideState] = useAtom(asideNavState)
 
     return(
         <motion.div 
             className="nav-side-container"
-            {...props}
-            
+            //   init={hamburgerHandler}
+            initial={false}
+            animate={useAsideState ? "open" : "closed"}
+            // animate={"open"}
+            variants={{
+              open:{
+                x:0,
+                opacity:1
+              },
+              closed:{
+                x:"-100vw",
+                opacity:0
+              }
+            }}
+            transition={{
+              type:"tween",
+              staggerChildren:.05
+            }}
         >
             <div className="link-container">
-                <LinkNav link="home" parent={parent}>
+                <LinkNav link="home">
                     Home
                 </LinkNav>
-                <LinkNav link="products" parent={parent}>
+                <LinkNav link="products">
                     Products
                 </LinkNav>
-                <LinkNav link="creative" parent={parent}>
+                <LinkNav link="creative">
                     Creative
                 </LinkNav>
-                <LinkNav link="about" parent={parent}>
+                <LinkNav link="about">
                     About
                 </LinkNav>
-                <LinkNav link="contact" parent={parent}>
+                <LinkNav link="contact">
                     Contact
                 </LinkNav>
             </div>

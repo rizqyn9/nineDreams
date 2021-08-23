@@ -9,6 +9,10 @@ import {
     useWindowHeight,
   } from '@react-hook/window-size'
 import { useEffect } from "react";
+import {motion} from 'framer-motion'
+import NavSide from "../Header/Nav-Side";
+
+
 
 
 
@@ -33,6 +37,7 @@ const Container = ({children, data}) => {
     return(
         <div className="container">
             <Header/>
+            <NavSide/>
             {children}
         </div>
     )

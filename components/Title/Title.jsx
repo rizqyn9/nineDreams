@@ -3,7 +3,8 @@ const Title = (props) => {
     return(
         <div className="title"
             style={{
-                order: `${isHamburger ? 1 : 'none'}`
+                color:`${isHamburger ? 'black' : 'white' }` 
+                // order: `${isHamburger ? 1 : 'none'}`
             }}
         >
             <span>

@@ -1,9 +1,7 @@
 import { useRef, useEffect } from "react";
 import { motion, useCycle } from "framer-motion";
-import NavOverlay from '../Nav/NavOverlay'
 import {useAtom} from 'jotai';
-import {scroolTarget} from '../Provider/Provider';
-import NavSide from "./Nav-Side";
+import {scroolTarget, asideNavState} from '../Provider/Provider';
 
 
 
@@ -70,13 +68,13 @@ const MenuToggle = ({ toggle }) => (
 const Hamburger = () => {
     const [isOpen, toggleOpen] = useCycle(false, true);
     const [useScrollTarget, setScrollTarget] = useAtom(scroolTarget)
+    const [useAsideState, setAsideState] = useAtom(asideNavState)
+    
+    useEffect(() => {
+      setAsideState(isOpen)
+      // console.log(useAsideState);
+    }, [isOpen])
 
-    const hamburgerHandler = () => {
-      console.log("haha");
-      toggleOpen()
-
-
-    }
     useEffect(() => {
       if(!useScrollTarget) return;
       document.getElementById(useScrollTarget).scrollIntoView()
@@ -84,63 +82,14 @@ const Hamburger = () => {
 
     }, [useScrollTarget])
     return (
-      <div className="hamburger-style">
+      <div className="hamburger-style" >
         <motion.div
             initial={false}
             animate={isOpen ? "open" : "closed"}
-            // custom={height}
-            // ref={containerRef}
             className="hamburger-container"
-            // variants={{
-            //   open:{
-            //     opacity:1
-            //   },
-            //   closed:{
-            //     opacity:0
-            //   }
-            // }}
-
         >
 
             <MenuToggle toggle={() => toggleOpen()} />
-            <NavSide
-              init={hamburgerHandler}
-              initial={false}
-              // animate={isOpen ? "open" : "closed"}
-              variants={{
-                open:{
-                  x:0,
-                  opacity:1
-                },
-                closed:{
-                  x:"100vw",
-                  opacity:0
-                }
-              }}
-              transition={{
-                staggerChildren:.05
-              }}
-            />
-
-
-            
-            {/* <NavOverlay 
-              mode="on-overlay" 
-              init={hamburgerHandler} 
-              initial={false}
-              animate={isOpen ? "open" : "closed"}
-              variants={{
-                open:{
-                  opacity:1
-                },
-                closed:{
-                  opacity:0
-                }
-              }}
-              transition={{
-                staggerChildren:.05
-              }}
-            /> */}
         </motion.div>
       </div>
     )
