@@ -8,12 +8,16 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     overscroll-behavior: none;
     background-color: black;
     overflow-x: hidden;
     height: max-content;
+    width: 100%;
     margin: 0;
     padding: 0;
+    background-color: red;
     //border: 1px solid white;
     //border-right: 1px solid white;
 }
@@ -29,6 +33,7 @@ body {
 @import './components/About/about';
 @import './components/Creative/creative';
 @import './components/Header/navAside';
+@import './components/Testing/testing';
 
 .text-{
     &xs{

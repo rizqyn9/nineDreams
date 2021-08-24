@@ -17,23 +17,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <script src="http://localhost:8097"></script>
       </Head>
-      <main className="home" style={{color:"red"}}>
-        <section className="dashboard" id="home">
-          <Dashboard/>
-        </section>
-        <section className="products" id="products">
-          <Products/>
-        </section>
-        <section className="contact" id="contact">
-         <Contact/>
-        </section>
-        <section className="about l-container" id="about">
-         <About/>
-        </section>
-        <section className="creative" id="creative">
-         <Creative/>
-        </section>
-      </main>
+      {/* <section className="testing">
+        Testing
+      </section> */}
+      <section className="dashboard" id="home">
+      <Dashboard/>
+      </section>
+      <section className="products" id="products">
+        <Products/>
+      </section>
+      <section className="contact" id="contact">
+        <Contact/>
+      </section>
+      {/* <section className="about" id="about">
+        <About/>
+      </section> */}
+      <section className="creative" id="creative">
+        <Creative/>
+      </section>
     </>
   );
 }
