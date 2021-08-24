@@ -12,10 +12,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <Provider>
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <title>Ninedreams</title>
         </Head>
+        <NavSide/>
         <Container >
-          <NavSide/>
           <Component {...pageProps} />
         </Container>
     </Provider>
