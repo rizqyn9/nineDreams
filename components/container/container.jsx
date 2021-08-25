@@ -2,7 +2,7 @@
 import Header from "../Header/Header"
 import {useAtom} from 'jotai'
 import {sizeScreen, deviceTarget} from '../Provider/Provider'
-import {isBrowser, deviceDetect, deviceType} from "react-device-detect";
+import {isBrowser, deviceDetect, deviceType, isMobile} from "react-device-detect";
 import {
     useWindowSize,
     useWindowWidth,
@@ -11,8 +11,6 @@ import {
 import { useEffect } from "react";
 import {motion} from 'framer-motion'
 import NavSide from "../Header/Nav-Side";
-
-
 
 
 
@@ -35,7 +33,7 @@ const Container = ({children, data}) => {
     }, [width, height])
     
     return(
-        <div className="container">
+        <div className={`container ${isMobile ? "mobile" : " "}`}>
             <Header/>
             <NavSide/>
             {children}

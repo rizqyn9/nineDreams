@@ -6,6 +6,7 @@ import useScroll from '../Scroll/Scroll'
 import {useAtom} from 'jotai'
 import {sizeScreen, deviceTarget, scroolTarget} from '../Provider/Provider'
 import Hamburger from './Hamburger'
+import { isMobile } from 'react-device-detect'
 
 
 const Header = () => {
@@ -20,7 +21,7 @@ const Header = () => {
     },[useDeviceTarget])
 
     return(
-        <div className={`header l-container ${useSizeScreen <= 1200 ? "header-humberger" : ""} `}>
+        <div className={`header l-container ${useSizeScreen <= 1200 || isMobile ? "header-hamburger" : ""} `}>
             <motion.div
                 className={`nav-inner 
                     ${scrollY > 50 ? "overlay" : ""}
@@ -31,9 +32,7 @@ const Header = () => {
                 {/* {scrollY} */}
                 {/* {useSizeScreen} */}
                 {/* {`${useDeviceTarget}`} */}
-                {( useSizeScreen <= 1200 ) ? <Hamburger /> : <Nav />}
-
-                
+                {( useSizeScreen <= 1200 ) || isMobile ? <Hamburger /> : <Nav />}
             </motion.div>
         </div>
     )

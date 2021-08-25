@@ -45,7 +45,6 @@
         align-items: center;
         padding-bottom: 8px;
         // letter-spacing: .3em;
-
     }
 
     .on-overlay {
@@ -72,7 +71,7 @@
         }
     }
 
-    &.header-humberger{
+    &.header-hamburger{
         padding: 10px 10px 10px 10px;
         .nav-inner{
             background-color: rgb(173, 173, 173);
@@ -97,10 +96,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .overlay{
     background-color: rgba(0, 0, 0, 0.349) !important;
     transition: all 500ms ease-in-out;
+}
+
+.mobile {
+    .title{
+        span{
+            color:white !important;
+
+        }
+    }
 }

@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import {useInView} from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 import {GlobalConfig, ContactConfig} from '../InView/config'
+import { isMobile } from 'react-device-detect'
 
 const Contact = () => {
     const [name, setName] = useState("")
@@ -26,7 +27,7 @@ const Contact = () => {
         }
     }
     return(
-        <div className="contact-container cut-nav">
+        <div className={`contact-container cut-nav`}>
             <motion.div className="contact-left l-container"
                 animate={contactAnim}
                 initial='hidden'

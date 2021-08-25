@@ -20,6 +20,10 @@ body {
     background-color: red;
     //border: 1px solid white;
     //border-right: 1px solid white;
+    section{
+        width: 100% !important;
+        overflow: hidden;
+    }
 }
 
 @import './components/Utils/scrollbar';
