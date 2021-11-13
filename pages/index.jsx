@@ -16,6 +16,7 @@ export default function Home(props) {
   return (
     <>
       <Head>
+        <meta name="facebook-domain-verification" content="c6y4ies041w9x9xdxqiuegcf3uqa2c" />
         <title>ninedreams | Home</title>
         <link rel="icon" href="/favicon.ico" />
         {/* <script src="http://localhost:8097"></script> */}
